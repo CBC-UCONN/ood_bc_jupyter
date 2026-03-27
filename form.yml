@@ -1,0 +1,63 @@
+---
+cluster: "mantis"
+
+# TODO: Could set these up to be globally available https://osc.github.io/ood-documentation/latest/how-tos/app-development/interactive/form.html#global-batch-connect-form-items
+
+attributes:
+  custom_environment: 
+    #TODO: Come up with way to have profiles for different environments?
+    widget: "text_area"
+    label: "Environment Setup"
+    help: "Enter environment setup commands (conda activate <env_name>, module load, etc.) to create the desired Jupyter Lab environment."
+    value: "module load py-jupyter"
+    display: true
+  
+  bc_num_hours:
+    widget: "number_field"
+    label: "Hours"
+    help: "The number of hours to request for the Jupyter Lab session."
+    value: 1
+    max: 12
+    display: true
+
+  custom_memory: 
+    widget: "text_field"
+    label: "Memory per Node"
+    pattern: "^[0-9]+(GB|MB)$"
+    help: "The amount of memory to request per node (e.g. 1GB, 100MB)."
+    value: "4GB"
+    display: true
+
+  num_cores:
+    widget: "number_field"
+    label: "Number of Cores"
+    help: "The number of CPU cores to request for the Jupyter Lab session."
+    value: 1
+    display: true
+  
+  gres:
+    widget: "text_field"
+    label: "GRES options"
+    help: "Specify any generic resources to request (e.g. GPUs). Leave blank if not needed."
+    value: ""
+    display: true
+  
+  auto_queues:
+    label: "Partitions"
+    value: "general"
+    display: true
+  
+  auto_qos:
+    label: "Quality of Service"
+    value: "general"
+    display: true
+
+form:
+  - custom_environment
+  - bc_num_hours
+  - custom_memory
+  - num_cores
+  - gres
+  - auto_queues
+  - auto_qos
+

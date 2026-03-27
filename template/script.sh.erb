@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Set working directory to home directory
+cd "${HOME}"
+
+# Configure environment
+<%= context.custom_environment.gsub /\r\n?/, "\n" %>
+
+# Launch the Jupyter Notebook Server
+set -x
+jupyter lab --config="${CONFIG_FILE}"
