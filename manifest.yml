@@ -1,7 +1,7 @@
 ---
-name: Jupyter Lab
+name: Jupyter Lab - Beta v1
 category: Interactive Apps
 subcategory: Web Apps
 role: batch_connect
 description: |
-  This app will launch a Jupyter Lab server on one or more nodes.
+  This app will launch a Jupyter Lab server.
