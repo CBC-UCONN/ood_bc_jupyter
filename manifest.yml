@@ -3,4 +3,4 @@ name: Jupyter Lab - Beta v1
 category: Interactive Apps
 role: batch_connect
 description: |
-  This app will launch a Jupyter Lab server.
+  This app will launch Jupyter Lab server.
