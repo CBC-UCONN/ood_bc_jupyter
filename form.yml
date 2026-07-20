@@ -1,8 +1,6 @@
 ---
 cluster: "mantis"
 
-# TODO: Could set these up to be globally available https://osc.github.io/ood-documentation/latest/how-tos/app-development/interactive/form.html#global-batch-connect-form-items
-
 attributes:
   custom_environment: 
     #TODO: Come up with way to have profiles for different environments?
